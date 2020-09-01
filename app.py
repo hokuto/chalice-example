@@ -4,7 +4,7 @@ app = Chalice(app_name='chalice-example')
 
 @app.route('/')
 def index():
-    return {'hello': 'world 5'}
+    return {'hello': 'world 6'}
 
 @app.route('/hello/{name}')
 def hello_name(name):

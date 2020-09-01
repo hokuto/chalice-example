@@ -6,8 +6,7 @@ phases:
       - aws --version
       - sudo pip install 'chalice>=1.18.0,<1.19.0'
       - sudo pip install -r requirements.txt
-      - chalice package --stage stg /tmp/packaged
-      - aws cloudformation package --template-file /tmp/packaged/sam.json --s3-bucket ${APP_S3_BUCKET} --output-template-file transformed.yaml
+      - chalice deploy --stage stg
 artifacts:
   type: zip
   files:
